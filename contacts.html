@@ -1,0 +1,614 @@
+<style>
+    
+    
+.contact {
+    margin: 0;
+    padding: 0;
+    background: #050b14;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================= MENU ================= */
+
+.navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            background-color: rgba(11, 15, 25, 0.6);
+            padding: 8px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-btn {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            border: 1px solid #1e293b;
+            background-color: #0b1120;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.25s ease;
+        }
+
+        .nav-btn:hover {
+            color: #ffffff;
+            border-color: rgba(56, 189, 248, 0.5);
+            background-color: rgba(56, 189, 248, 0.1);
+        }
+
+        .nav-btn.active {
+            background-color: rgba(56, 189, 248, 0.12);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+            font-weight: 600;
+            box-shadow: 0 0 12px var(--accent-glow);
+        }
+
+/* ================= HERO ================= */
+
+.contact-hero {
+    text-align: center;
+
+    padding: 90px 25px 70px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0, 140, 255, 0.14),
+            transparent 55%
+        );
+}
+
+.contact-label {
+    color: #008cff;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+.contact-hero h1 {
+    font-size: 52px;
+
+    margin: 20px 0;
+}
+
+.contact-hero h1 span {
+    color: #008cff;
+}
+
+.contact-hero > p:last-child {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #aebbc9;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* ================= CONTENU ================= */
+
+.contact-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 30px 100px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+
+/* ================= INFORMATIONS ================= */
+
+.contact-info h2,
+.contact-form h2 {
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+.contact-info > p {
+    color: #9eacba;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+
+    background: #0a1421;
+
+    border: 1px solid #008cff;
+
+    border-radius: 12px;
+}
+
+.contact-item h3 {
+    margin: 0 0 7px;
+}
+
+.contact-item p,
+.contact-item a {
+    margin: 0;
+
+    color: #9eacba;
+
+    line-height: 1.6;
+
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    color: #008cff;
+}
+
+
+/* ================= NOTE CONFIDENTIALITÉ ================= */
+
+.privacy-note {
+    margin-top: 35px;
+
+    padding: 20px;
+
+    background: #08111d;
+
+    border-left: 3px solid #008cff;
+
+    border-radius: 8px;
+
+    color: #c4d0dc;
+}
+
+.privacy-note p {
+    margin-bottom: 0;
+
+    color: #8999aa;
+
+    line-height: 1.6;
+}
+
+
+/* ================= FORMULAIRE ================= */
+
+.contact-form {
+    padding: 35px;
+
+    background: #0a1421;
+
+    border: 1px solid rgba(0, 140, 255, 0.25);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+
+    color: #d9e3ec;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    color: white;
+
+    background: #050b14;
+
+    border: 1px solid #24384c;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #008cff;
+
+    box-shadow:
+        0 0 10px rgba(0, 140, 255, 0.15);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #627386;
+}
+
+
+/* ================= BOUTON ================= */
+
+.contact-form button {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #008cff;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0074d4;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 140, 255, 0.3);
+}
+
+
+/* ================= PHRASE FINALE ================= */
+
+.contact-final {
+    padding: 90px 25px;
+
+    text-align: center;
+
+    background: #08111d;
+}
+
+.contact-final-icon {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+.contact-final h2 {
+    font-size: 38px;
+}
+
+.contact-final h2 span {
+    color: #008cff;
+}
+
+.contact-final p {
+    color: #9eacba;
+
+    font-size: 18px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.contact footer {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    background: #03070d;
+
+    color: #7f91a3;
+}
+
+.contact footer p {
+    margin: 8px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 800px) {
+
+    .contact-hero h1 {
+        font-size: 38px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-form {
+        padding: 25px 20px;
+    }
+
+    .contact-final h2 {
+        font-size: 30px;
+    }
+
+}
+
+</style>
+<body class="contact">
+     <nav>
+             <header class="main-header">
+  <nav class="navbar">
+    <a href="index.html" class="nav-btn">Acceuil</a>
+    <a href="blog.html" class="nav-btn">Blog</a>
+    <a href="quiz.html" class="nav-btn">Quiz</a>
+    <a href="bibliotheque.html" class="nav-btn">Bibliotheque</a>
+    <a href="contacts.html" class="nav-btn">Contacts</a>
+    <a href="apropos.html" class="nav-btn">Apropos</a>
+  </nav>
+</header>
+
+
+           <!-- INTRODUCTION -->
+    <section class="contact-hero">
+
+        <p class="contact-label">CONTACTEZ-NOUS</p>
+
+        <h1>
+            Parlons de
+            <span>cybersécurité.</span>
+        </h1>
+
+        <p>
+            Une question sur la cybersécurité ? Une suggestion pour
+            améliorer Cybersite ? Notre équipe est à votre écoute.
+        </p>
+
+    </section>
+
+
+    <!-- CONTENU CONTACT -->
+    <section class="contact-container">
+
+        <!-- INFORMATIONS -->
+        <div class="contact-info">
+
+            <h2>Restons en contact</h2>
+
+            <p>
+                Vous souhaitez en savoir plus sur la cybersécurité,
+                nous faire une suggestion ou simplement nous poser
+                une question ?
+            </p>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon"></div>
+
+                <div>
+                    <h3>Email</h3>
+                    <a href="mailto:Franckcirimwami2@gmail.com">
+                        Franckcirimwami2@gmail.com
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">📱</div>
+
+                <div>
+                    <h3>Téléphone / WhatsApp</h3>
+
+                    <a href="tel:0803865621">
+                        0803865621
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">📍</div>
+
+                <div>
+                    <h3>Localisation</h3>
+
+                    <p>
+                        Bukavu, Sud-Kivu,<br>
+                        République démocratique du Congo
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="privacy-note">
+
+                <strong>Votre confidentialité compte.</strong>
+
+                <p>
+                    Nous accordons de l'importance à la protection
+                    de vos informations personnelles.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULAIRE -->
+        <div class="contact-form">
+
+            <h2>Envoyez-nous un message</h2>
+
+            <form
+                action="mailto:Franckcirimwami2@gmail.com"
+                method="post"
+                enctype="text/plain">
+
+                <div class="form-group">
+
+                    <label for="nom">
+                        Nom complet
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nom"
+                        name="Nom"
+                        placeholder="Votre nom complet"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Adresse e-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="Email"
+                        placeholder="exemple@gmail.com"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="sujet">
+                        Sujet
+                    </label>
+
+                    <input
+                        type="text"
+                        id="sujet"
+                        name="Sujet"
+                        placeholder="Sujet de votre message"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="Message"
+                        rows="7"
+                        placeholder="Écrivez votre message ici..."
+                        required></textarea>
+
+                </div>
+
+
+                <button type="submit">
+                    Envoyer le message →
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- PHRASE FINALE -->
+    <section class="contact-final">
+
+        <div class="contact-final-icon">
+            
+        </div>
+
+        <h2>
+            Votre sécurité commence
+            <span>par une question.</span>
+        </h2>
+
+        <p>
+            N'hésitez pas à nous contacter.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Cybersite — Tous droits réservés.
+        </p>
+
+        <p>
+            Un projet réalisé par des étudiants passionnés
+            par la cybersécurité à Bukavu.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

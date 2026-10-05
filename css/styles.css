@@ -1,0 +1,551 @@
+
+body {
+    margin: 0 auto;
+}
+
+header.header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-bottom: 4px solid red;
+}
+
+
+header.header img {
+    width: 50px;
+}
+
+section.top-page {
+    position: relative;
+    background: url("../image/fond.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+
+
+
+/* Menu de navigation */ 
+
+nav.nav {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    
+
+}
+
+nav.nav a {
+    color: black;
+}
+
+
+/* Titre de bienvenue */
+
+.big-title {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 45px;
+    text-align: center;
+    margin: 0;
+    width: 80%;
+}
+
+
+
+.landing-page {
+  position: relative; 
+  min-height: 100vh;  
+}
+
+/* 2. Style et positionnement du bouton */
+.scroll-downb {
+  position: absolute;
+  bottom: 100px;               /* Positionné à 30px du bas de la landing-page */
+  left: 50%;                  /* Décalé au milieu */
+  transform: translateX(-50%);/* Centré exactement au milieu */
+  
+  color: white;               /* Force le texte et l'icône en blanc */
+  text-decoration: none;      /* Enlève le soulignement bleu */
+  font-size: 18px;
+}
+
+/* 3. Éviter qu'il devienne bleu/violet après avoir cliqué dessus */
+.scroll-downb:visited,
+.scroll-downb:hover {
+  color: white;
+}
+
+/* apropos de nous */
+
+.section-title {
+    font-size: 45px;;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    position: relative;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(14, 14, 67);
+    width: 50px;
+    height: 6px;
+    bottom: 0;
+
+}
+
+.apropos {
+    margin: 50px;
+}
+
+.creator-img {
+    min-height: 500px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.creator {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-width: 300px;
+    height: 500px;
+    flex: 1;
+    margin: 0 10px°;
+}
+
+.creator1 {
+    background-image: url(../image/creator1.jpeg);
+}
+
+.creator2 {
+    background-image: url(../image/creator2.jpeg);
+}
+
+.creator3 {
+    background-image: url(../image/creator3.jpeg);
+}.creator-details {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: #FFFFFFDF;
+    padding: 5px 20px;
+}
+
+.creator-name {
+    font-weight: 600;
+    line-height: 3px;
+}
+
+.creator-faculte {
+    line-height: 3px;
+}
+
+/* contact */
+
+.section-title2 {
+    font-size: 45px;;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    position: relative;
+}
+
+.section-title2::before {
+    content: "";
+    position: absolute;
+    background-color: rgb(14, 14, 67);
+    width: 50px;
+    height: 6px;
+    bottom: 0;
+
+}
+
+
+.contact {
+    margin: 50px;
+}
+
+
+
+.intro-text {
+    top: 55%;
+    left: 50%;
+    color: black;
+    font-size: 15px;
+    margin-left: 40px;
+    text-align: center;
+    width: 90%;
+}
+
+/* icons */
+
+.icons {
+  text-align: center;
+  
+}
+
+.icons a {
+  color: inherit;           
+  text-decoration: none;     
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #666; /* Couleur grise discrète */
+}
+
+/* BLOG*/
+
+.mot h1 {
+    text-align: center;
+}
+
+/* Container principal avec grille réactive */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Retrait de tout style de carte (transparent et sans bordure) */
+.video-card {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Ratio 16:9 responsive pour que l'iframe s'affiche correctement */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Textes sous la vidéo */
+.video-info {
+  padding-top: 10px;
+}
+
+.video-title {
+  margin: 8px 0 4px 0;
+  font-size: 1.1rem;
+}
+
+.video-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+ 
+/* ==========================================================================
+   Styles de l'écran d'accueil & Quiz
+   ========================================================================== */
+
+
+/* Nouveau Design de la Présentation */
+.main-title {
+  text-align: center;
+  font-size: 54px;
+  font-weight: 900;
+  color: #2563eb;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 24px;
+}
+
+.long-description {
+  text-align: justify;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto 36px auto;
+}
+
+.center-btn {
+  text-align: center;
+}
+
+.btn {
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.primary-btn {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+}
+
+/* Quiz Interface */
+.progress-track {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.q-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+.type-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+.type-tag.phishing-tag {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.type-tag.quiz-tag {
+  background: #eff6ff;
+  color: #2563eb;
+  border: 1px solid #bfdbfe;
+}
+
+.message-card, .quiz-question-card, .panel {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.message-head {
+  background: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.options.dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.options.mcq {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.opt-btn {
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.opt-btn:hover {
+  border-color: #2563eb;
+  background: #f8fafc;
+}
+
+.opt-btn.correct {
+  border-color: #16a34a !important;
+  background: #f0fdf4 !important;
+  color: #16a34a !important;
+}
+
+.opt-btn.wrong {
+  border-color: #dc2626 !important;
+  background: #fef2f2 !important;
+  color: #dc2626 !important;
+}
+
+#feedback {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+#quiz-result {
+  text-align: center;
+}
+
+.score-big {
+  font-size: 56px;
+  font-weight: 800;
+  color: #2563eb;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Force exactement 5 colonnes par ligne */
+.books-grid {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 20px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 10px 0 !important;
+}
+
+/* Carte transparente centrée */
+.book-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* Centre l'image et le bloc texte */
+  text-align: left !important;   /* Garde le texte aligné à gauche sous l'image */
+}
+
+/* Zone d'image ajustée */
+.cover-box {
+  width: 100% !important;
+  max-width: 180px !important; /* Limite la largeur max de la couverture */
+  height: 240px !important;    /* Hauteur fixe pour aligner le haut du texte */
+  display: flex !important;
+  align-items: flex-end !important; /* Aligne les images en bas de la zone */
+  justify-content: center !important;
+  margin-bottom: 8px !important;
+}
+
+/* Ajustement de la couverture */
+.book-cover-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important; /* Conserve les proportions sans déformer */
+  display: block !important;
+}
+
+/* Bloc texte exactement calé sous l'image */
+.book-details {
+  width: 100% !important;
+  max-width: 180px !important; /* Même largeur maximale que l'image */
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.book-title {
+  font-size: 0.85rem !important;
+  font-weight: bold !important;
+  margin: 0 0 2px 0 !important;
+  line-height: 1.2 !important;
+}
+
+.book-author {
+  font-size: 0.75rem !important;
+  opacity: 0.7 !important;
+  margin: 0 0 4px 0 !important;
+}
+
+.book-details a {
+  font-size: 0.8rem !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+}

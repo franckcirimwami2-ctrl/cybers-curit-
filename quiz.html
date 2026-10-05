@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Cybersécurité — CyberSite</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+        <header class="header">
+            <img src="image/logo.png" alt="logo du site">
+            <nav class="nav">
+               
+                <a href="index.html" class="nav-btn">Acceuil</a>
+                <a href="blog.html" class="nav-btn active">Blog</a>
+                <a href="quiz.html" class="nav-btn">Quiz</a>
+                <a href="bibliotheque.html" class="nav-btn">Bibliothèque</a>
+                <a href="dashboard.html" class="nav-btn">Board</a>
+
+            </nav>
+        </header>
+
+  <main class="container">
+
+    <!-- Écran d'accueil du quiz -->
+    <div id="quiz-intro">
+      <h1 class="main-title">Questions</h1>
+      <h2 class="sub-title">Phishing & bonnes pratiques cyber</h2>
+      
+      <p class="long-description">
+        Bienvenue sur notre module d'évaluation en cybersécurité. Ce test interactif a été conçu pour renforcer vos réflexes face aux cyberattaques du quotidien. À travers une série de questions tirées aléatoirement, vous serez confronté à des simulations réelles d'emails de phishing, de SMS frauduleux ainsi qu'à des questions de culture générale sur la sécurité informatique (mots de passe, 2FA, sauvegardes, réseaux Wi-Fi). Prenez le temps de bien analyser chaque message avant de répondre !
+      </p>
+
+      <div class="center-btn">
+        <button class="btn primary-btn" id="start-btn">Démarrer le quiz</button>
+      </div>
+    </div>
+
+    <!-- Interface des questions -->
+    <div id="quiz-container" style="display: none;">
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      
+      <div class="q-meta">
+        <span id="q-counter">Question 1 / 5</span>
+        <span id="q-score">Score : 0</span>
+      </div>
+      
+      <div id="type-tag" class="type-tag"></div>
+
+      <!-- Card Email/SMS Phishing -->
+      <div class="message-card" id="message-card-wrap">
+        <div class="message-head" id="msg-head"></div>
+        <div class="message-body" id="msg-body"></div>
+      </div>
+
+      <!-- Card Question Générale -->
+      <div class="quiz-question-card" id="quiz-question-card">
+        <div class="q-text" id="q-text"></div>
+      </div>
+
+      <!-- Choix de réponses -->
+      <div class="options" id="options-container"></div>
+
+      <!-- Feedback explication -->
+      <div id="feedback" style="display: none;">
+        <div class="verdict" id="verdict-text"></div>
+        <div id="explanation-text"></div>
+        <div class="next-wrap">
+          <button class="btn primary-btn" id="next-btn">Question suivante →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Écran des résultats -->
+    <div id="quiz-result" style="display: none;">
+      <div class="badge" id="result-badge">Résultat</div>
+      <div class="score-big" id="final-score">0/5</div>
+      <div class="score-label" id="final-label">Score final</div>
+      <div class="panel summary-panel" id="category-summary"></div>
+      <div class="result-actions">
+        <a class="btn primary-btn" href="dashboard.html">Voir mon tableau de bord</a>
+        <button class="btn secondary-btn" id="retry-btn">Recommencer le quiz</button>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

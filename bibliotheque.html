@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSens - Bibliothèque</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head> 
+
+<body class="bibliotheque"> 
+  
+        <header class="header">
+            <img src="image/logo.png" alt="logo du site">
+            <nav class="nav">
+               
+                <a href="index.html" class="nav-btn">Acceuil</a>
+                <a href="blog.html" class="nav-btn active">Blog</a>
+                <a href="quiz.html" class="nav-btn">Quiz</a>
+                <a href="bibliotheque.html" class="nav-btn">Bibliothèque</a>
+                <a href="dashboard.html" class="nav-btn">Board</a>
+
+            </nav>
+        </header>
+
+
+
+    <section class="hero-section">
+        <p class="sub-title">BIBLIOTHÈQUE</p>
+        <h1 class="main-title">
+            Livres & Guides <span class="highlight">Cybersécurité</span>
+        </h1>
+        <p class="description">
+            Explorez notre sélection de 20 livres, documentations et guides officiels au format PDF pour développer vos compétences techniques en sécurité informatique.
+        </p>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="library-container">
+
+        <!-- CATÉGORIE 1 -->
+        <h2 class="category-title">
+            <span class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            1. Hygiène & Bases de la Cybersécurité
+        </h2>
+        <div class="books-grid">
+
+            <!-- Livre 1 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/1.jpg" alt="Guide Hygiène ANSSI" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Guide d'Hygiène Informatique</h3>
+                        <p class="book-author">Auteur : ANSSI</p>
+                    </div>
+                    <a href="https://www.ssi.gouv.fr/uploads/2017/01/guide_hygiene_informatique_anssi.pdf" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Télécharger PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 2 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/2.jpg" alt="NIST Cybersecurity Framework" class="book-cover-img" onerror="this.style.display='none'">
+                   
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">NIST Cybersecurity CSF 2.0</h3>
+                        <p class="book-author">Auteur : NIST</p>
+                    </div>
+                    <a href="https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Télécharger PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 3 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/3.jpg" alt="CIS Controls v8" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">CIS Critical Controls v8</h3>
+                        <p class="book-author">Auteur : CIS Security</p>
+                    </div>
+                    <a href="https://www.cisecurity.org/controls/v8" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 4 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/14.jpg" alt="ANSSI Mots de Passe" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Mots de passe & MFA</h3>
+                        <p class="book-author">Auteur : ANSSI</p>
+                    </div>
+                    <a href="https://www.ssi.gouv.fr/uploads/2021/10/anssi-guide-authentification_multifacteur_et_mots_de_passe.pdf" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Télécharger PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 5 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/5.jpg" alt="CISA Cyber Essentials" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Cyber Essentials Guide</h3>
+                        <p class="book-author">Auteur : CISA</p>
+                    </div>
+                    <a href="https://www.cisa.gov/resources-tools/resources/cybersecurity-essentials" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CATÉGORIE 2 -->
+        <h2 class="category-title">
+            <span class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </span>
+            2. Sécurité Web & Développement Sécurisé
+        </h2>
+        <div class="books-grid">
+
+            <!-- Livre 6 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/6.jpg" alt="OWASP Top 10" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">OWASP Top 10 Web</h3>
+                        <p class="book-author">Auteur : OWASP Foundation</p>
+                    </div>
+                    <a href="https://owasp.org/www-project-top-ten/" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 7 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/7.jpg" alt="OWASP API Top 10" class="book-cover-img" onerror="this.style.display='none'">
+                   
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">OWASP API Security</h3>
+                        <p class="book-author">Auteur : OWASP Foundation</p>
+                    </div>
+                    <a href="https://owasp.org/API-Security/" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 8 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/8.jpg" alt="PortSwigger Academy" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Web Security Academy</h3>
+                        <p class="book-author">Auteur : PortSwigger</p>
+                    </div>
+                    <a href="https://portswigger.net/web-security" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Accéder Manuel
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 9 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/9.jpeg" alt="OWASP WSTG" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Web Security Testing</h3>
+                        <p class="book-author">Auteur : OWASP</p>
+                    </div>
+                    <a href="https://owasp.org/www-project-web-security-testing-guide/" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 10 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/17.jpg" alt="CERT C Coding" class="book-cover-img" onerror="this.style.display='none'">
+                   
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">SEI CERT C Coding</h3>
+                        <p class="book-author">Auteur : Carnegie Mellon</p>
+                    </div>
+                    <a href="https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Norme
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CATÉGORIE 3 -->
+        <h2 class="category-title">
+            <span class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </span>
+            3. Réseaux, Systèmes & Administration
+        </h2>
+        <div class="books-grid">
+
+            <!-- Livre 11 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/11.jpeg" alt="The Linux Command Line" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">The Linux Command Line</h3>
+                        <p class="book-author">Auteur : William Shotts</p>
+                    </div>
+                    <a href="https://sourceforge.net/projects/linuxcommand/files/TLCL/19.01/TLCL-19.01.pdf/download" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Télécharger PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 12 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/12.jpeg" alt="Sécurité Linux ANSSI" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Sécurité Systèmes Linux</h3>
+                        <p class="book-author">Auteur : ANSSI</p>
+                    </div>
+                    <a href="https://www.ssi.gouv.fr/uploads/2019/09/anssi-guide-recommandations_de_securite_pour_un_systeme_gnu_linux.pdf" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Télécharger PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 13 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/13.jpg" alt="Wireshark User Guide" class="book-cover-img" onerror="this.style.display='none'">
+                   
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Wireshark User's Guide</h3>
+                        <p class="book-author">Auteur : Wireshark Team</p>
+                    </div>
+                    <a href="https://www.wireshark.org/docs/wsug_html_chunked/" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 14 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/4.jpg" alt="NSA Network Best Practices" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Network Best Practices</h3>
+                        <p class="book-author">Auteur : NSA / CISA</p>
+                    </div>
+                    <a href="https://media.defense.gov/2022/Jun/15/2003018261/-1/-1/0/CTR_NSM_BEST_PRACTICES.PDF" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Télécharger PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 15 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/15.jpg" alt="Docker Security OWASP" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Docker Security Guide</h3>
+                        <p class="book-author">Auteur : OWASP</p>
+                    </div>
+                    <a href="https://cheatsheetseries.owasp.org/cheatsheets/Docker_Security_Cheat_Sheet.html" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CATÉGORIE 4 -->
+        <h2 class="category-title">
+            <span class="category-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12V2z"/><path d="M12 12L2.5 7.5"/><path d="M12 12v10"/></svg>
+            </span>
+            4. Hacking Éthique & Pentest
+        </h2>
+        <div class="books-grid">
+
+            <!-- Livre 16 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/16.jpg" alt="Metasploit Unleashed" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Metasploit Unleashed</h3>
+                        <p class="book-author">Auteur : OffSec</p>
+                    </div>
+                    <a href="https://www.offsec.com/metasploit-unleashed/" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Cours
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 17 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/10.jpeg" alt="Reverse Engineering for Beginners" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Reverse Engineering</h3>
+                        <p class="book-author">Auteur : Dennis Yurichev</p>
+                    </div>
+                    <a href="https://beginners.re/RE_for_beginners-en.pdf" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Télécharger PDF
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 18 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/18.jpg" alt="PTES Framework" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">PTES Standard Framework</h3>
+                        <p class="book-author">Auteur : PTES Team</p>
+                    </div>
+                    <a href="http://www.pentest-standard.org/index.php/Main_Page" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 19 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/19.jpg" alt="MITRE ATT&CK Framework" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">MITRE ATT&CK Matrix</h3>
+                        <p class="book-author">Auteur : MITRE Org</p>
+                    </div>
+                    <a href="https://attack.mitre.org/" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Matrice
+                    </a>
+                </div>
+            </div>
+
+            <!-- Livre 20 -->
+            <div class="book-card">
+                <div class="cover-box">
+                    <img src="livres/20.jpg" alt="Firmware Security OWASP" class="book-cover-img" onerror="this.style.display='none'">
+                    
+                </div>
+                <div class="book-details">
+                    <div>
+                        <h3 class="book-title">Firmware Security Testing</h3>
+                        <p class="book-author">Auteur : OWASP IoT</p>
+                    </div>
+                    <a href="https://scriptingxss.gitbook.io/firmware-security-testing-methodology" target="_blank" rel="noopener noreferrer" class="btn-read">
+                        Consulter Guide
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+<footer class="footer">
+  <p>&copy; 2026 CyberSens. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

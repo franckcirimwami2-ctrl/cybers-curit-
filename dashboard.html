@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de bord — CyberSite</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+        <header class="header">
+            <img src="image/logo.png" alt="logo du site">
+            <nav class="nav">
+               
+                <a href="index.html" class="nav-btn">Acceuil</a>
+                <a href="blog.html" class="nav-btn active">Blog</a>
+                <a href="quiz.html" class="nav-btn">Quiz</a>
+                <a href="bibliotheque.html" class="nav-btn">Bibliothèque</a>
+                <a href="dashboard.html" class="nav-btn">Board</a>
+
+            </nav>
+        </header>
+
+  <main class="container">
+    <h1 class="sub-title" style="text-align: left; margin-bottom: 20px;">Tableau de Bord & Performances</h1>
+
+    <!-- Cartes Résumé -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px;">
+      <div class="panel" style="margin-bottom: 0; text-align: center;">
+        <span style="color: #64748b; font-size: 14px;">Tentatives effectuées</span>
+        <h2 id="stat-attempts" style="font-size: 32px; color: #2563eb; margin-top: 5px;">0</h2>
+      </div>
+      <div class="panel" style="margin-bottom: 0; text-align: center;">
+        <span style="color: #64748b; font-size: 14px;">Moyenne globale</span>
+        <h2 id="stat-average" style="font-size: 32px; color: #16a34a; margin-top: 5px;">0%</h2>
+      </div>
+      <div class="panel" style="margin-bottom: 0; text-align: center;">
+        <span style="color: #64748b; font-size: 14px;">Meilleur score</span>
+        <h2 id="stat-best" style="font-size: 32px; color: #d97706; margin-top: 5px;">0/25</h2>
+      </div>
+    </div>
+
+    <!-- Historique des sessions -->
+    <div class="panel">
+      <h3>Historique des quiz passés</h3>
+      <div id="history-list" style="margin-top: 15px;">
+        <p style="color: #64748b;">Aucune tentative enregistrée pour le moment.</p>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const history = JSON.parse(localStorage.getItem('cybersens_quiz_history') || '[]');
+      
+      if (history.length === 0) return;
+
+      // Mettre à jour les indicateurs haut de page
+      document.getElementById('stat-attempts').textContent = history.length;
+      
+      const totalPct = history.reduce((sum, item) => sum + item.percentage, 0);
+      const avg = Math.round(totalPct / history.length);
+      document.getElementById('stat-average').textContent = `${avg}%`;
+
+      const maxScore = Math.max(...history.map(item => item.score));
+      document.getElementById('stat-best').textContent = `${maxScore}/25`;
+
+      // Afficher l'historique
+      const listEl = document.getElementById('history-list');
+      listEl.innerHTML = '';
+
+      history.forEach((attempt, idx) => {
+        const item = document.createElement('div');
+        item.style.cssText = 'display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e2e8f0;';
+        item.innerHTML = `
+          <div>
+            <b>Tentative #${history.length - idx}</b> — <span style="color: #64748b; font-size: 14px;">${attempt.date}</span>
+          </div>
+          <div style="font-weight: bold; color: ${attempt.percentage >= 70 ? '#16a34a' : '#dc2626'};">
+            ${attempt.score} / ${attempt.total} (${attempt.percentage}%)
+          </div>
+        `;
+        listEl.appendChild(item);
+      });
+    });
+  </script>
+
+<footer class="footer">
+  <p>&copy; 2026 CyberSens. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
